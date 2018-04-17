@@ -1,10 +1,12 @@
 var PRICE = 9.99;
+var LOADNUM = 10;
 var app = new Vue({
     el: "#app",
     data: {
         price: PRICE, 
         total: 0,
         items: [],
+        results:[],
         cart: [],
         newSearch: "anime",
         search: "",
@@ -16,7 +18,8 @@ var app = new Vue({
             this.loading = true;
             this.$http.get("/search/".concat(this.newSearch))
                 .then(function(res) {
-                    this.items = res.data;
+                    this.results = res.data;
+                    this.items = this.results.slice(0,LOADNUM);
                     this.loading = false;
                 });
             this.search = this.newSearch;
