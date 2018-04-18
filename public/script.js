@@ -25,15 +25,18 @@ var app = new Vue({
             }
         },
         onSubmit: function() {
-            this.items = [];
-            this.loading = true;
-            this.$http.get("/search/".concat(this.newSearch))
-                .then(function(res) {
-                    this.results = res.data;
-                    this.appendItems();
-                    this.loading = false;
-                });
-            this.search = this.newSearch;
+            if (this.newSearch.length) {
+                this.items = [];
+                this.loading = true;
+                this.$http.get("/search/".concat(this.newSearch))
+                    .then(function(res) {
+                        this.results = res.data;
+                        this.appendItems();
+                        this.loading = false;
+                    });
+                this.search = this.newSearch;
+
+            }
         },
         addItem: function(index) {
             var item = this.items[index];
