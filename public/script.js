@@ -12,6 +12,11 @@ var app = new Vue({
         search: "",
         loading: false
     },
+    computed: {
+        noMoreItems: function() {
+            return (this.items.length === this.results.length && this.results.length > 0);
+        }
+    },
     methods: {
         appendItems: function() {
             if (this.items.length < this.results.length) {
