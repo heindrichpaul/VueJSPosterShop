@@ -1,29 +1,30 @@
 {
-  "name": "vuejs-poster-shop",
-  "version": "1.0.0",
-  "description": "Ultimate Vue.js Developers Course",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon ./index.js --ignore node_modules/ -e js,html,css"
-  },
-  "author": "Anthony Gore <info@getjsdojo.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vuejsdevelopers/vuejs-poster-shop"
-  },
-  "license": "UNLICENSED",
-  "dependencies": {
-    "axios": "^0.15.2",
-    "body-parser": "^1.15.2",
-    "dotenv": "^2.0.0",
-    "express": "^4.14.0",
-    "querystring": "^0.2.0",
-    "scrollmonitor": "^1.2.0",
-    "vue": "^2.1.0",
-    "vue-resource": "^1.0.3"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.3",
-    "reload": "^1.1.0"
-  }
+    "name": "vuejs-poster-shop",
+    "version": "1.0.0",
+    "description": "Ultimate Vue.js Developers Course",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon ./index.js --ignore node_modules/ -e js,html,css",
+        "prod": "webpack --env prod && webpack --env build "
+    },
+    "author": "Anthony Gore <info@getjsdojo.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vuejsdevelopers/vuejs-poster-shop"
+    },
+    "license": "UNLICENSED",
+    "dependencies": {
+        "axios": "^0.15.2",
+        "body-parser": "^1.18.3",
+        "dotenv": "^2.0.0",
+        "express": "^4.16.4",
+        "querystring": "^0.2.0",
+        "scrollmonitor": "^1.2.0",
+        "vue": "^2.5.20",
+        "vue-resource": "^1.5.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.8",
+        "reload": "^1.1.0"
+    }
 }
