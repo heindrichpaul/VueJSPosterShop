@@ -20,7 +20,7 @@
         "express": "^4.16.4",
         "querystring": "^0.2.0",
         "scrollmonitor": "^1.2.0",
-        "vue": "^2.5.20",
+        "vue": "^2.6.12",
         "vue-resource": "^1.5.1"
     },
     "devDependencies": {
